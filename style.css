@@ -1,1 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0E3B43;
+  font-family: Arial, sans-serif;
+}
+
+.calc {
+  background-color: #357266;
+  width: 60vmin;
+  height: 80vmin;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Screen */
+.screen {
+  background-color: #fff;
+  height: 20%;
+  padding: 15px 20px;
+  font-size: clamp(3.5rem, 4vw, 3rem);
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+  overflow-x: auto;
+  user-select: none;
+}
+
+/* Buttons Grid */
+.buttons {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 12px;
+  padding: 15px;
+  background-color: #2f5d54;
+}
+
+.buttons button {
+  background-color: #A3BBAD;
+  border: none;
+  border-radius: 50%;
+  font-size: 6.5vmin;
+  color: #222;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease;
+  user-select: none;
+  aspect-ratio: 1 / 1;
+}
+
+.buttons button:hover {
+  background-color: #8fa89a;
+}
+.buttons button:active {
+  background-color: white;
+  transition: background-color 0.1s ease;
+}
+
+/* Equals Button */
+#equals {
+  background-color: #4CAF50;
+  color: white;
+}
+#equals:hover {
+  background-color: #45a049;
+}
+#equals:active {
+  background-color: #3e8e41;
+  transition: background-color 0.1s ease;
+}
+
+/* Clear Button Block */
+.clear {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #2f5d54;
+  border-radius: 0 0 20px 20px;
+}
+
+#clear {
+  width: 100%;
+  padding: 15px;
+  font-size: 5vmin;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#clear:hover {
+  background-color: #333;
+}
+#clear:active {
+  background-color: #111;
+  transition: background-color 0.1s ease;
+}
